@@ -4,13 +4,13 @@ The aim of this tool is to simplify the creation of the handover report
 for the invoice that we send for processing every month.
 
 Based on the configuration file, the application can create a PDF of the
-transfer protocol according to predefined parameters.
+report according to predefined parameters.
 
 ## Requirements
 
-* Node.js 18
 * Git
-* Yarn
+* [Node.js](https://nodejs.org/en/download) 18+
+* [Yarn](https://yarnpkg.com)
 
 ## Installation
 
