@@ -11,7 +11,7 @@ if (process.argv.length > 2) {
 }
 
 let configPaths = [
-    // './config.yml',
+    './config.yml',
     './config.dist.yml',
 ];
 
