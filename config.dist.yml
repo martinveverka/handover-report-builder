@@ -16,7 +16,7 @@ pdf:
     Author: Generátor předávacích protokolů
     Producer: Generátor předávacích protokolů
     Keywords:
-  target_path: '/mnt/d/Prijmeni-Jmeno_{{ period }}_{{ order }}.pdf'
+  target_path: './Prijmeni-Jmeno_{{ period }}_{{ order }}.pdf'
 
 provider:
   name: Jméno Příjmení
