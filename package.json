@@ -1,0 +1,17 @@
+{
+  "name": "handover-report-builder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "repository": "git@github.com:martinveverka/handover-report-builder.git",
+  "author": "Martin Veverka",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "pdfkit": "^0.13.0",
+    "pdfkit-table": "^0.1.99"
+  },
+  "type": "module"
+}

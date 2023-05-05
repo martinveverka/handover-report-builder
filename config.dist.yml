@@ -1,0 +1,72 @@
+intl:
+  locale: cs # formatter locale
+
+pdf:
+  font:
+    regular: Roboto Regular
+    bold: Roboto Bold
+    correction: 0.96 # optional, for fine-tuning
+  fonts:
+    Roboto Regular: data/Roboto-Regular.ttf
+    Roboto Bold: data/Roboto-Bold.ttf
+  info:
+    Title: Předávací protokol
+    Subject: Předávací protokol
+    Creator: martinveverka/handover-report-builder
+    Author: Generátor předávacích protokolů
+    Producer: Generátor předávacích protokolů
+    Keywords:
+  target_path: '/mnt/d/Prijmeni-Jmeno_{{ period }}_{{ order }}.pdf'
+
+provider:
+  name: Jméno Příjmení
+  company_no: '01234567' # use string to preserve leading zeros
+  vat_payer: false
+#  signature: # optional, experimental
+#    path: data/signature.png
+#    offset_y: 0
+
+order_defaults:
+  rate: 123
+  rate_currency: CZK
+  third_party_libs: # Žádné.
+  reservations: # Bez výhrad.
+
+order_item_defaults:
+  product: Produkt jedna [001]
+  type: podpora
+
+orders:
+  # simple order
+  2020-02:
+    order: 4500202020
+    items:
+      MFV-1000 Tisíc: 40
+      MFV-1001 Tisícjedna: 50
+      MFV-1002 Tisícdva: 60
+
+  # complex order
+  2020-03:
+    order: 4500202020
+    period: březen 2020 # optional, when using `yyyy-mm` order identification, the period is determined automatically
+    rate: 123 # optional, fallbacks to order_defaults.rate
+    rate_currency: CZK # optional, fallbacks to order_defaults.rate_currency
+    third_party_libs: Žádné. # optional, fallbacks to order_defaults.third_party_libs
+    reservations: Bez výhrad. # optional, fallbacks to order_defaults.reservations
+    items:
+      - name: MFV-1000 Tisíc
+        hours: 20
+        product: Produkt jedna [001] # optional, fallbacks to order_item_defaults.product
+        type: podpora # optional, fallbacks to order_item_defaults.type
+      - name: MFV-1001 Tisícjedna a ukázka dlouhého názvu úkolu, když se zadavatel nechá unést
+        hours: 50
+        product: Produkt dva [002] # optional, fallbacks to order_item_defaults.product
+        type: podpora # optional, fallbacks to order_item_defaults.type
+      - name: MFV-1002 Tisícdva
+        hours: 60
+        product: Investice jedna [001] # optional, fallbacks to order_item_defaults.product
+        type: vylepšení # optional, fallbacks to order_item_defaults.type
+      - name: MFV-1003 Tisíctři
+        hours: 20
+        product: Produkt jedna [001] # optional, fallbacks to order_item_defaults.product
+        type: podpora # optional, fallbacks to order_item_defaults.type
