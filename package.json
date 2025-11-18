@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "js-yaml": "^4.1.1",
-    "pdfkit": "^0.13.0",
+    "pdfkit": "^0.17.2",
     "pdfkit-table": "^0.1.99"
   },
   "type": "module"
