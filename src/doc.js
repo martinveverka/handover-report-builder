@@ -91,9 +91,10 @@ export default class Doc extends PDFDocumentWithTables {
         this.x = this.page.margins.left + 113;
         this.y = y1; // reset y
 
-        let provider = this.report.provider;
-        let order = this.report.order.toString();
-        let period = this.report.getPeriodText();
+        const provider = this.report.provider;
+        const order = typeof this.report.order === 'undefined' || null === this.report.order
+            ? '\n' : this.report.order.toString();
+        const period = this.report.getPeriodText();
 
         // right column
         this.text(provider.name);

@@ -94,9 +94,14 @@ export default class Report {
             throw new Error('Invalid target path.');
         }
 
+        const period = typeof this.periodId === 'undefined' || null === this.periodId
+            ? '0' : this.periodId;
+        const order = typeof this.order === 'undefined' || null === this.order
+            ? '0' : this.order.toString();
+
         let targetPath = template;
-        targetPath = targetPath.replace(/{{ period }}/, this.periodId);
-        targetPath = targetPath.replace(/{{ order }}/, this.order.toString());
+        targetPath = targetPath.replace(/{{ period }}/, period);
+        targetPath = targetPath.replace(/{{ order }}/, order);
 
         return targetPath;
     }
