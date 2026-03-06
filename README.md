@@ -10,7 +10,7 @@ report according to predefined parameters.
 
 * Git
 * [Node.js](https://nodejs.org/en/download) 18+
-* [Yarn](https://yarnpkg.com)
+* npm
 
 ## Installation
 
@@ -19,7 +19,7 @@ Clone repository and install packages.
 ```shell
 git clone https://github.com/martinveverka/handover-report-builder
 cd handover-report-builder
-yarn install
+npm install
 ```
 
 ## Run
@@ -37,12 +37,12 @@ in the configuration file.
 Then create a report using the build command.
 
 ```shell
-yarn build
+npm run build
 ```
 
 If you are going to create an order history, you can create a specific
 report by specifying a parameter to the build command.
 
 ```shell
-yarn build 2020-03
+npm run build -- 2020-03
 ```
